@@ -19,4 +19,6 @@ ENTRYPOINT "/entrypoint.sh"
 
 USER dev
 
+RUN [ "/bin/bash", "-c", "vim -T dumb  -n -i NONE -S <(echo -e \"silent! PluginInstall\") -S <(echo -e \"qa\")" ]
+
 CMD ["bash"]
